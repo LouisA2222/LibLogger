@@ -40,8 +40,13 @@ class Logger
         Logger();
         ~Logger();
         void info(const char *msg, const char *file = "", const char *function = "", int line = 0);
+        void info(std::string *, const char *file = "", const char *function = "", int line = 0);
+        void info(std::string, const char *file = "", const char *function = "", int line = 0);
+        // Warning
         void warning(const char *msg, const char *file = "", const char *function = "", int line = 0);
+        // Error
         void error(const char *msg, const char *file = "", const char *function = "", int line = 0);
+        // Debug
         void debug(const char *msg, const char *file = "", const char *function = "", int line = 0);
 
         // Getters

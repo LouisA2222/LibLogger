@@ -25,6 +25,26 @@ void Logger::info(const char *msg, const char *file, const char *function, int l
     }
 }
 
+/// @brief Logger info function (print in green)
+/// @param msg
+/// @param file can be empty (nullptr or "")
+/// @param function can be empty (nullptr or "")
+/// @param line can be empty (0)
+void Logger::info(std::string *msg, const char *file, const char *function, int line)
+{
+    info(msg->c_str(), file, function, line);
+}
+
+/// @brief Logger info function (print in green)
+/// @param msg
+/// @param file can be empty (nullptr or "")
+/// @param function can be empty (nullptr or "")
+/// @param line can be empty (0)
+void Logger::info(std::string msg, const char *file, const char *function, int line)
+{
+    info(msg.c_str(), file, function, line);
+}
+
 /// @brief Logger warning function (print in yellow)
 /// @param msg
 /// @param file can be empty (nullptr or "")
